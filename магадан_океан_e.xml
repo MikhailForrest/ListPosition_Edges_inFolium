@@ -1,0 +1,20 @@
+<FIR>
+  <Name>Магадан океан</Name>
+  <ListOfAOI>
+    <AOI>
+      <Name>Магадан океан</Name>
+			<Points>
+				<Point>N87380000 E181013600 0.000000</Point>
+				<Point>N72000000 E181013600 0.000000</Point>
+				<Point>N72300000 E168000000 0.000000</Point>
+				<Point>N72000000 E158000000 0.000000</Point>
+				<Point>N75080000 E151000000 0.000000</Point>
+				<Point>N75350000 E146300000 0.000000</Point>
+				<Point>N78000000 E114450000 0.000000</Point>
+				<Point>N87380000 E181013600 0.000000</Point>
+				
+				
+			</Points>
+    </AOI>
+  </ListOfAOI>
+</FIR>

@@ -1,0 +1,16 @@
+<FIR>
+  <Name>Калининград</Name>
+  <ListOfAOI>
+    <AOI>
+      <Name>Калининград</Name>
+			<Points>
+				<Point>N56054200 E018010600 0.000000</Point>
+				<Point>N55222400 E020383600 0.000000</Point>
+				<Point>N55184200 E020333600 0.000000</Point>
+				<Point>N54361200 E019242400 0.000000</Point>
+				<Point>N55510000 E017330000 0.000000</Point>
+				<Point>N56054200 E018010600 0.000000</Point>
+			</Points>
+    </AOI>
+  </ListOfAOI>
+</FIR>
