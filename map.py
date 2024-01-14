@@ -12,7 +12,7 @@ class GeoPoint:
 map1 = folium.Map(location=[56,92],
                     zoom_start=3, tiles="OpenStreetMap",attr=False, prefer_canvas=True)
 
-with open("2806_CPDLS_1.txt") as file: # 
+with open("Lists\\2806_CPDLS_1.txt") as file: # 
     for item in file:
         l1 = (list(map(str, item.split()))) 
         print (l1) 
@@ -59,4 +59,4 @@ for str_ in files_list:
             list_of_coord.append([point.lat,point.lon])  
     folium.PolyLine(list_of_coord, color='maroon',fill = False).add_to(map1) 
 
-map1.save("map_cpdlc.html")
+map1.save("results\\map_cpdlc.html")
