@@ -1,5 +1,6 @@
 import folium
 import xml.etree.ElementTree as ET
+import os
 
 class GeoPoint:
     """docstring"""
@@ -15,7 +16,7 @@ map1 = folium.Map(location=[56,92],
 with open("Lists\\2806_CPDLS_1.txt") as file: # 
     for item in file:
         l1 = (list(map(str, item.split()))) 
-        print (l1) 
+        #print (l1) 
         if float(l1[2])<0:
             folium.Circle(location=[float(l1[1]),float(l1[2])+360]
                     ).add_to(map1)
@@ -27,26 +28,12 @@ with open("Lists\\2806_CPDLS_1.txt") as file: #
             folium.Marker(location=[float(l1[1]),float(l1[2])],
                                     icon=folium.DivIcon(html=f'''<!DOCTYPE html><html><div style="font-size: 8pt"><p>{l1[0]}</p></div></html>''',
                                     class_name="mapText")).add_to(map1)
-       
-files_list = ['azimut_Simferopol_e.xml',
-              'иркутск_e.xml',
-              'azimut_ЕкатеринбургЗЦ_e.xml',
-              'azimut_КрасноярскРЦ_e.xml',
-              'azimut_МоскваЗЦ_e.xml',
-              'azimut_РостовнаДонуЗЦ_e.xml',
-              'azimut_РФ_Красноярск_e.xml',
-              'azimut_СамараЗЦ_e.xml',
-              'azimut_СПБ_e.xml',
-              'петропавловск_e.xml',
-              'тюмень_e.xml',
-              'калининград_e.xml',
-              'магадан_e.xml',
-              'Yakutsk_e.xml',
-              'магадан_океан_e.xml',
-              'Хабаровск2_e.xml']
 
-for str_ in files_list: 
-    tree1 = ET.parse(str_)
+directory = os.fsencode('Edges')
+
+for file in os.listdir(directory):
+    str_ = os.fsdecode(file)
+    tree1 = ET.parse('Edges\\'+str_)
     root_1_0 = tree1.getroot()
     root_1_1 = root_1_0[1][0][1] #массив точек тут сразу
     list_of_coord= []
