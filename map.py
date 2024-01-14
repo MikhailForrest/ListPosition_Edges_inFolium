@@ -13,7 +13,7 @@ class GeoPoint:
 map1 = folium.Map(location=[56,92],
                     zoom_start=3, tiles="OpenStreetMap",attr=False, prefer_canvas=True)
 
-with open("Lists\\2806_CPDLS_1.txt") as file: # 
+with open("Lists\\Positions.txt") as file: # 
     for item in file:
         l1 = (list(map(str, item.split()))) 
         #print (l1) 
@@ -39,7 +39,7 @@ for file in os.listdir(directory):
     list_of_coord= []
     for root_1_2 in root_1_1:
         if isinstance(root_1_2.text, str):
-            list_h = root_1_2.text.split(' ') #разделение строки по указанному разделителю
+            list_h = root_1_2.text.split(' ') 
             lat_ = int(list_h[0][1:3])+int(list_h[0][3:5])/60+int(list_h[0][5:])/(60*6000)
             lon_ = int(list_h[1][1:4])+int(list_h[1][4:6])/60+int(list_h[1][6:])/(60*6000)
             point = GeoPoint(lat_,lon_)   
